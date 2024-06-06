@@ -1,0 +1,57 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.5.5 Header Style 1
+/*----------------------------------------*/
+// Header top
+.header-top-area {
+    background-color: #2B2E32;
+    padding: 11px 0px;
+}
+.header-top-left {
+	display: flex;
+	align-items: center;
+	gap: 5px 30px;
+	flex-wrap: wrap;
+	justify-content: center;
+	@media #{$xs} {
+		gap: 5px 15px;
+	}
+}
+.header-top-main {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 5px 8px;
+	@media #{$xs} {
+		justify-content: center;
+	}
+} 
+.header-info {
+	span {
+		margin-right: 6px;
+		color: var(--bd-white);
+		@media #{$xs,$sm} {
+			font-size: 14px;
+		}
+	}
+	a {
+		color: var(--bd-white);
+		@media #{$xs,$sm} {
+			font-size: 14px;
+		}
+		&:hover {
+			color: var(--bd-primary);
+		}
+	}
+}
+.header-right-info {
+    display: flex;
+    align-items: center;
+    gap: 10px 20px;
+	.description {
+		color: var(--bd-white);
+		margin-bottom: 0;
+	}
+}

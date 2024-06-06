@@ -1,0 +1,59 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.5.1 Header Style 1
+/*----------------------------------------*/
+
+.header-primary {
+	position: relative;
+	&::before {
+		position: absolute;
+		content: "";
+		height: 100%;
+		width: calc(100% - 12%);
+		background: linear-gradient(90deg, #0D57D7 0%, #4D8EFF 100%);
+		top: 0;
+		right: 0;
+	}
+	.header-inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: relative;
+		z-index: 55;
+		border-radius: 100px 0px 0px 100px;
+		position: relative;
+		@media #{$xs} {
+			padding-left: 15px;
+		}
+	}
+	.bar-icon {
+		span {
+			background: var(--bd-white);
+		}
+	}
+}
+.header-quick-action {
+	ul {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		li {
+			list-style: none;
+		}
+	}
+}
+.header-action {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	.quick-action-item {
+		height: 50px;
+		width: 50px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #fff;
+		border-radius: 50%;
+	}
+}

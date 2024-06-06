@@ -1,0 +1,81 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.2 Buttons
+/*----------------------------------------*/
+.bd-gradient-btn {
+  font-size: 15px;
+  color: var(--bd-white);
+  text-transform: uppercase;
+  font-weight: var(--bd-fw-sbold);
+  padding: 0px 35px;
+  @include inline-flex();
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  height: 60px;
+  @include border-radius(30px);
+  position: relative;
+  -webkit-transition: all 0.5s ease-out 0s;
+  -moz-transition: all 0.5s ease-out 0s;
+  -ms-transition: all 0.5s ease-out 0s;
+  -o-transition: all 0.5s ease-out 0s;
+  z-index: 5;
+  background-position: 100% 100%;
+  background-size: 300% 100%;
+  background-image: linear-gradient(90deg, rgba(13, 87, 215, 1) 0%, rgba(77, 142, 255, 1) 100%, rgba(77, 142, 255, 1) 100%, rgba(13, 87, 215, 1) 0%, );
+  &:focus {
+    color: var(--bd-common-white);
+  }
+  &:hover {
+    color: var(--bd-common-white);
+    background-position: 0 100%;
+  }
+}
+.header-btn {
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--bd-white);
+  padding: 0px 25px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.banner-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 20px 20px;
+  flex-wrap: wrap;
+}
+.banner-play {
+  height: 60px;
+  width: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, rgba(13, 87, 215, 1) 0%, rgba(77, 142, 255, 1) 100%);
+  @include border-radius(50%);
+  color: var(--bd-white);
+  position: relative;
+  z-index: 5;
+  &::before {
+    content: "";
+    position: absolute;
+    width: calc(100% + 14px);
+    height: calc(100% + 14px);
+    @include border-radius(50%);
+    padding: 1px;
+    background-image:( linear-gradient(90deg, rgba(13, 87, 215, 1) 0%, rgba(77, 142, 255, 1) 100%));
+    -webkit-mask: linear-gradient(var(--bd-white) 0 0) content-box, linear-gradient(var(--bd-white) 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+}
+  span {
+    position: relative;
+    top: -2px;
+  }
+}

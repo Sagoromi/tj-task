@@ -1,0 +1,95 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.10 Preloader
+/*----------------------------------------*/
+
+#preloader {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-color: var(--bd-white);
+	z-index: 99999;
+	text-align: center;
+}
+
+.preloader-wrap {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.plane {
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    top: 50%;
+	left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.plane-img {
+	-webkit-animation: spin 2.5s linear infinite;
+	-moz-animation: spin 2.5s linear infinite;
+	animation: spin 2.5s linear infinite;
+	@media #{$md,$sm,$xs} {
+		width: 120px;
+  		height: 120px;
+	}
+}
+
+@-moz-keyframes spin {
+	100% {
+		-moz-transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+
+.earth-wrapper {
+	position: absolute;
+	margin: 0 auto;
+	width: 100%;
+	padding-top: 2.7rem;
+}
+
+.earth {
+    width: 160px;
+    height: 160px;
+    border-radius: 100%;
+    background-size: 340px;
+    animation: earthAnim 12s infinite linear;
+    margin: 0 auto;
+    border: 1px solid var(--bd-border-primary);
+    top: 0;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	@media #{$md,$sm,$xs} {
+		width: 70px;
+  		height: 70px;
+	}
+}
+@keyframes earthAnim {
+	0% {
+		background-position-x: 0;
+	}
+
+	100% {
+		background-position-x: -340px;
+	}
+}

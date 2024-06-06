@@ -1,0 +1,26 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.6 Social
+/*----------------------------------------*/
+
+// social
+.bd-social {
+	ul {
+		display: flex;
+		gap: 30px;
+		flex-wrap: wrap;
+		li {
+			list-style: none;
+			a {
+                color: var(--bd-white);
+                @media #{$xs} {
+					font-size: 14px;
+				}
+				&:hover {
+					color: var(--bd-primary);
+				}
+			}
+		}
+	}
+}

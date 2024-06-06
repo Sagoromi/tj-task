@@ -1,0 +1,52 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.0 Section Title  
+/*----------------------------------------*/
+
+// section title 
+.section-title {
+  letter-spacing: -0.02em;
+}
+
+// Section subtitle
+.section-subtitle {
+  font-size: 16px;
+  font-weight: var(--bd-fw-bold);
+  display: inline-flex;
+  color: #929191;
+  align-items: center;
+  gap: 15px;
+  font-family: var(--bd-ff-secondary);
+  .round {
+    width: 12.14px;
+    height: 12.14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bd-primary);
+    border-radius: 50%;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 100%;
+      background-color: var(--bd-primary);
+      top: 0;
+      left: 8px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 100%;
+      background-color: var(--bd-white);
+      top: 0;
+      left: 6px;
+      border-radius: 50%;
+    }
+  }
+}

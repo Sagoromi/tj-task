@@ -1,7 +1,7 @@
 (function($) {
     "use strict";
 
-    $(".th-slider").each(function() {
+    $(".bd-slider").each(function() {
         var $slider = $(this);
         var options = $slider.data("slider-options");
         var $prevButton = $slider.find(".slider-prev");

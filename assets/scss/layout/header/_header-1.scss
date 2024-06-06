@@ -16,7 +16,7 @@
 		right: 0;
 	}
 	.header-inner {
-		display: flex;
+		@include flexbox();
 		align-items: center;
 		justify-content: space-between;
 		z-index: 55;
@@ -45,7 +45,7 @@
 }
 .header-quick-action {
 	ul {
-		display: flex;
+		@include flexbox();
 		align-items: center;
 		gap: 20px;
 		li {
@@ -54,7 +54,7 @@
 	}
 }
 .header-action {
-	display: flex;
+	@include flexbox();
 	align-items: center;
 	gap: 20px;
 	.quick-action-item {

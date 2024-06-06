@@ -22,13 +22,12 @@
   -o-transition: all 0.5s ease-out 0s;
   z-index: 5;
   background-position: 100% 100%;
-  background-size: 300% 100%;
   background-image: linear-gradient(90deg, rgba(13, 87, 215, 1) 0%, rgba(77, 142, 255, 1) 100%, rgba(77, 142, 255, 1) 100%, rgba(13, 87, 215, 1) 0%, );
   &:focus {
-    color: var(--bd-common-white);
+    color: var(--bd-white);
   }
   &:hover {
-    color: var(--bd-common-white);
+    color: var(--bd-white);
     background-position: 0 100%;
   }
 }
@@ -45,9 +44,9 @@
   text-transform: uppercase;
 }
 .banner-btn-group {
-  display: flex;
+  @include flexbox();
   align-items: center;
-  gap: 20px 20px;
+  gap: 15px 30px;
   flex-wrap: wrap;
 }
 .banner-play {
@@ -61,6 +60,7 @@
   color: var(--bd-white);
   position: relative;
   z-index: 5;
+  margin: 7px;
   &::before {
     content: "";
     position: absolute;
@@ -73,9 +73,12 @@
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     z-index: -1;
-}
+  }
   span {
     position: relative;
     top: -2px;
+  }
+  &:hover {
+    color: var(--bd-white);
   }
 }

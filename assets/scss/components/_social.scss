@@ -7,7 +7,7 @@
 // social
 .bd-social {
 	ul {
-		display: flex;
+		@include flexbox();
 		gap: 30px;
 		flex-wrap: wrap;
 		li {

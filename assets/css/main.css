@@ -3707,10 +3707,20 @@ input:checked + .switch:before {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
   z-index: 55;
   border-radius: 100px 0px 0px 100px;
   position: relative;
+}
+.header-primary .header-inner::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 322px;
+  background-color: #DBE8FF;
+  z-index: -1;
+  left: -129px;
+  border-radius: 0px 50px 50px 0;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 16.667% 100%, 0% 0%);
 }
 @media (max-width: 575px) {
   .header-primary .header-inner {
@@ -3804,58 +3814,6 @@ input:checked + .switch:before {
 .bar-icon:hover span:nth-child(3) {
   animation-delay: 0.2s;
 }
-.bar-icon.is-black span {
-  background: var(--bd-black);
-}
-.bar-icon.is-white span {
-  background: var(--bd-white);
-}
-.bar-icon.style-two span {
-  transition: all 0.3s ease-in;
-}
-.bar-icon.style-two span:nth-child(2) {
-  width: 85%;
-}
-.bar-icon.style-two span:nth-child(3) {
-  width: 75%;
-}
-.bar-icon.style-two:hover span {
-  width: 100%;
-}
-
-.header-common {
-  background: var(--bd-bg-primary);
-}
-
-.h-gap-5 {
-  gap: 5;
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .h-gap-5 {
-    gap: 0;
-  }
-}
-
-.has-border {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.bar-icon-square {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 4px;
-}
-.bar-icon-square span {
-  transition: 0.3s;
-  display: block;
-  width: 6px;
-  height: 6px;
-  background-color: var(--bd-heading);
-  transition: all 0.3s ease-in-out;
-}
-.bar-icon-square:hover span {
-  background-color: var(--bd-primary);
-}
 
 /* Banner index */
 /*----------------------------------------*/
@@ -3895,6 +3853,7 @@ input:checked + .switch:before {
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
   max-width: 125px;
+  cursor: pointer;
 }
 .banner-main-area .hero-thumb .indicator {
   position: absolute;
@@ -3904,7 +3863,7 @@ input:checked + .switch:before {
   width: var(--width-set);
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
-  outline: 3px solid var(--theme-color);
+  outline: 3px solid var(--bd-primary);
   border-radius: 99px;
 }
 
@@ -3979,7 +3938,7 @@ input:checked + .switch:before {
   display: none;
 }
 .bd-main-menu > ul > li:hover > a {
-  color: var(--bd-primary);
+  color: var(--bd-white);
 }
 .bd-main-menu > ul > li:hover > ul {
   opacity: 1;

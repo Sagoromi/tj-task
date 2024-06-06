@@ -38,6 +38,7 @@
 			-webkit-transition: 0.4s ease-in-out;
 			transition: 0.4s ease-in-out;
 			max-width: 125px;
+			cursor: pointer;
 		}
 		.indicator {
 			position: absolute;
@@ -47,7 +48,7 @@
 			width: var(--width-set);
 			-webkit-transition: 0.4s ease-in-out;
 			transition: 0.4s ease-in-out;
-			outline: 3px solid var(--theme-color);
+			outline: 3px solid var(--bd-primary);
 			border-radius: 99px;
 		}
 	}
